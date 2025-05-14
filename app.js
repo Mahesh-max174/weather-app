@@ -8,11 +8,12 @@ async function getWeather() {
     const data = await response.json();
 
     const weatherResult = document.getElementById("weatherResult");
-    weatherResult.innerHTML = `
-      <h3>${data.location.name}</h3>
-      <p>Temperature: ${data.current.temp_c}°C</p>
-      <p>Weather: ${data.current.condition.text}</p>
-    `;
+   weatherResult.innerHTML = `
+  <h3>${data.location.name}</h3>
+  <img src="${data.current.condition.icon}" alt="Weather Icon" style="width: 64px;">
+  <p>Temperature: ${data.current.temp_c}°C</p>
+  <p>Weather: ${data.current.condition.text}</p>
+`;
   } catch (error) {
     alert("City not found!");
   }
