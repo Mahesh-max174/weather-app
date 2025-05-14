@@ -1,15 +1,73 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Nature background image (free to use) */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), 
+              url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
   text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input, button {
-  padding: 10px;
-  margin: 10px;
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  width: 70%;
+  margin-right: 10px;
+  outline: none;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
 }
 
 #weatherResult {
-  margin-top: 20px;
-  font-size: 1.2em;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+#weatherResult h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#weatherResult p {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
